@@ -9,16 +9,22 @@ public class CounterMain {
     public static final int REPS = 10_000_000;
 
     public static void main(String[] args) throws InterruptedException {
-        final var c = new HalfSynchronizedCounter();
+        final var c = new U5HalfSynchronizedCounter();
 
-        Runnable r = () -> {
+        Runnable r1 = () -> {
             for (int i = 0; i < REPS; i = i + 1) {
                 c.increment();
             }
         };
 
-        Thread tA = new Thread(r);
-        Thread tB = new Thread(r);
+        Runnable r2 = () -> {
+            for (int i = 0; i < REPS; i = i + 1) {
+                c.increment(true);
+            }
+        };
+
+        Thread tA = new Thread(r1);
+        Thread tB = new Thread(r2);
         long start = System.currentTimeMillis();
         tA.start();
         tB.start();

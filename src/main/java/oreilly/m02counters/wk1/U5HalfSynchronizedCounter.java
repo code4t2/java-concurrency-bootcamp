@@ -6,7 +6,7 @@ import oreilly.m02counters.Counter;
  *
  * @author ben
  */
-public final class HalfSynchronizedCounter implements Counter {
+public final class U5HalfSynchronizedCounter implements Counter {
 
     private int i = 0;
 
