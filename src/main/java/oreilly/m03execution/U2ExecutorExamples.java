@@ -2,10 +2,10 @@ package oreilly.m03execution;
 
 import java.util.concurrent.*;
 
-public class ExecutorExamples {
+public class U2ExecutorExamples {
 
     public static void main(String[] args) {
-        ExecutorExamples ee = new ExecutorExamples();
+        U2ExecutorExamples ee = new U2ExecutorExamples();
         ee.run();
     }
 
@@ -21,7 +21,10 @@ public class ExecutorExamples {
             System.out.println("Finished on "+ name);
         };
 
-        ExecutorService ex = Executors.newSingleThreadExecutor();
+        // Try different types of Executors
+//        ExecutorService ex = Executors.newSingleThreadExecutor();
+//        ExecutorService ex = Executors.newCachedThreadPool();
+        ExecutorService ex = Executors.newFixedThreadPool(4);
         ex.execute(r);
         ex.execute(r);
         ex.execute(r);
