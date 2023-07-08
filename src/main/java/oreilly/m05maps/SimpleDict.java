@@ -1,9 +1,9 @@
-package oreilly.maps;
+package oreilly.m05maps;
 
 import java.util.*;
 
 public class SimpleDict implements Map<String, String> {
-    private Node[] table = new Node[8];
+    private final Node[] table = new Node[8];
     private int size;
 
     @Override
@@ -24,8 +24,8 @@ public class SimpleDict implements Map<String, String> {
         for (Node e = table[indexFor(hash, table.length)];
              e != null;
              e = e.next) {
-            Object k;
-            if (e.hash == hash && ((k = e.key) == key || key.equals(k)))
+            Object k = e.key;
+            if (e.hash == hash && (k == key || key.equals(k)))
                 return e.value;
         }
         return null;
@@ -38,9 +38,11 @@ public class SimpleDict implements Map<String, String> {
 
         int hash = hash(key.hashCode());
         int i = indexFor(hash, table.length);
-        for (Node e = table[i]; e != null; e = e.next) {
-            Object k;
-            if (e.hash == hash && ((k = e.key) == key || key.equals(k))) {
+        for (Node e = table[i];
+             e != null;
+             e = e.next) {
+            Object k = e.key;
+            if (e.hash == hash && (k == key || key.equals(k))) {
                 String oldValue = e.value;
                 e.value = value;
 
@@ -111,8 +113,8 @@ public class SimpleDict implements Map<String, String> {
             return false;
 
         Node[] tab = table;
-        for (int i = 0; i < tab.length ; i++)
-            for (Node e = tab[i]; e != null ; e = e.next)
+        for (int i = 0; i < tab.length; i++)
+            for (Node e = tab[i]; e != null; e = e.next)
                 if (value.equals(e.value))
                     return true;
         return false;
@@ -144,7 +146,7 @@ public class SimpleDict implements Map<String, String> {
     ////////////////////////////////
 
     static int indexFor(int h, int length) {
-        return h & (length-1);
+        return h & (length - 1);
     }
 
     static final int hash(Object key) {
@@ -152,7 +154,7 @@ public class SimpleDict implements Map<String, String> {
         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
 
-    static class Node implements Entry<String,String> {
+    static class Node implements Entry<String, String> {
         final int hash;
         final String key;
         String value;
@@ -165,9 +167,17 @@ public class SimpleDict implements Map<String, String> {
             this.next = next;
         }
 
-        public final String getKey()        { return key; }
-        public final String getValue()      { return value; }
-        public final String toString() { return key + "=" + value; }
+        public final String getKey() {
+            return key;
+        }
+
+        public final String getValue() {
+            return value;
+        }
+
+        public final String toString() {
+            return key + "=" + value;
+        }
 
         public final int hashCode() {
             return Objects.hashCode(key) ^ Objects.hashCode(value);
@@ -183,7 +193,7 @@ public class SimpleDict implements Map<String, String> {
             if (o == this)
                 return true;
             if (o instanceof Node) {
-                Node e = (Node)o;
+                Node e = (Node) o;
                 if (Objects.equals(key, e.getKey()) &&
                         Objects.equals(value, e.getValue()))
                     return true;

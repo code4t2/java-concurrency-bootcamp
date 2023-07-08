@@ -1,13 +1,11 @@
-package oreilly.maps;
+package oreilly.m05maps;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
-public class MapExamples {
+public class U1MapExamples {
     public static void main(String[] args) {
         Map<String, String> map = new SimpleDict();
-        int SIZE = 100;
+        int SIZE = 100_000;
 
         Runnable r1 = () -> {
           for (int i = 0; i < SIZE; i = i + 1) {
