@@ -1,13 +1,14 @@
-package oreilly.locks;
+package oreilly.m04locks;
 
-public class JUCMain {
+public class U1ClassicMain {
 
     public static void main(String[] args) {
-        SimpleBoundedQueue q = new JUCQueue();
+        SimpleBoundedQueue<Object> q = new U1ClassicQueue<>();
+
         Runnable source = () -> {
             for (var i = 0; i < 5000; i += 1) {
                 try {
-                    q.put("Item"+ i);
+                    q.put("Item " + i);
                 } catch (InterruptedException __) {
                 }
             }
@@ -17,7 +18,7 @@ public class JUCMain {
             for (var i = 0; i < 5000; i += 1) {
                 try {
                     Object o = q.take();
-                    System.out.println("Collected: "+ o);
+                    System.out.println("Collected: " + o);
                 } catch (InterruptedException __) {
                 }
             }

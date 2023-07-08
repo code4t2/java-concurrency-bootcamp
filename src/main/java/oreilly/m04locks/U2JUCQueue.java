@@ -1,17 +1,17 @@
-package oreilly.locks;
+package oreilly.m04locks;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class JUCQueue implements SimpleBoundedQueue {
+public class U2JUCQueue<T> implements SimpleBoundedQueue<T> {
     private final Lock lock = new ReentrantLock();
-    private final Condition notFull  = lock.newCondition();
+    private final Condition notFull = lock.newCondition();
     private final Condition notEmpty = lock.newCondition();
-    private final Object[] items = new Object[100];
-    private int putptr, takeptr, count;
+    private final T[] items = (T[]) new Object[100];
+    private int putPtr, takePtr, count;
 
-    public void put(Object x) throws InterruptedException {
+    public void put(T x) throws InterruptedException {
         lock.lock();
         try {
             // If full, release lock & wait until we get it back
@@ -19,8 +19,8 @@ public class JUCQueue implements SimpleBoundedQueue {
                 notFull.await();
             }
 
-            items[putptr] = x;
-            if (++putptr == items.length) putptr = 0;
+            items[putPtr] = x;
+            if (++putPtr == items.length) putPtr = 0;
             count += 1;
 
             // signal notEmpty that it can try for the lock again
@@ -30,7 +30,7 @@ public class JUCQueue implements SimpleBoundedQueue {
         }
     }
 
-    public Object take() throws InterruptedException {
+    public T take() throws InterruptedException {
         lock.lock();
         try {
             // If empty, release the lock & wait
@@ -38,8 +38,8 @@ public class JUCQueue implements SimpleBoundedQueue {
                 notEmpty.await();
             }
 
-            Object x = items[takeptr];
-            if (++takeptr == items.length) takeptr = 0;
+            T x = items[takePtr];
+            if (++takePtr == items.length) takePtr = 0;
             count -= 1;
 
             // Signal notFull that it can stop waiting & try for the lock
