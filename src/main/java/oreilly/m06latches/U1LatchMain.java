@@ -1,8 +1,8 @@
-package oreilly.latches;
+package oreilly.m06latches;
 
 import java.util.concurrent.CountDownLatch;
 
-public class LatchMain {
+public class U1LatchMain {
 
     public static void main(String[] args) throws InterruptedException {
         var latch = new CountDownLatch(3);

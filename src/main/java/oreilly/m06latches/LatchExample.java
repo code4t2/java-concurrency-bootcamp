@@ -1,4 +1,4 @@
-package oreilly.latches;
+package oreilly.m06latches;
 
 import java.util.concurrent.CountDownLatch;
 
