@@ -1,6 +1,6 @@
-package oreilly.counters.wk1;
+package oreilly.m02counters.wk1;
 
-import oreilly.counters.Counter;
+import oreilly.m02counters.Counter;
 
 /**
  *

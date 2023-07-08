@@ -1,6 +1,6 @@
-package oreilly.counters;
+package oreilly.m02counters;
 
-import oreilly.counters.wk1.*;
+import oreilly.m02counters.wk1.*;
 
 /**
  * @author ben
@@ -9,7 +9,7 @@ public class CounterMain {
     public static final int REPS = 10_000_000;
 
     public static void main(String[] args) throws InterruptedException {
-        final var c = new UnprotectedCounter();
+        final var c = new HalfSynchronizedCounter();
 
         Runnable r = () -> {
             for (int i = 0; i < REPS; i = i + 1) {
@@ -26,8 +26,8 @@ public class CounterMain {
         tB.join();
         long fin = System.currentTimeMillis();
         int lost = 2 * REPS - c.get();
-        System.out.println("Lost Updates: " + lost);
-        System.out.println("Elapsed: " + (fin - start));
+        System.out.println(c.getClass().getSimpleName() + " lost " + lost + " updates");
+        System.out.println(c.getClass().getSimpleName() + " took " + (fin - start) + " ms");
     }
 
 }

@@ -1,12 +1,12 @@
-package oreilly.counters.wk1;
+package oreilly.m02counters.wk1;
 
-import oreilly.counters.Counter;
+import oreilly.m02counters.Counter;
 
 /**
  *
  * @author ben
  */
-public final class VolatileCounter implements Counter {
+public final class U3VolatileCounter implements Counter {
 
     private volatile int value = 0;
 

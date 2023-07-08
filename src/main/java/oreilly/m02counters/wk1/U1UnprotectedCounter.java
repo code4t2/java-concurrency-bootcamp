@@ -1,12 +1,12 @@
-package oreilly.counters.wk1;
+package oreilly.m02counters.wk1;
 
-import oreilly.counters.Counter;
+import oreilly.m02counters.Counter;
 
 /**
  *
  * @author ben
  */
-public final class UnprotectedCounter implements Counter {
+public final class U1UnprotectedCounter implements Counter {
 
     private int i = 0;
 

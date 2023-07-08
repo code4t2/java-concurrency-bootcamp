@@ -1,4 +1,4 @@
-package oreilly.caching;
+package oreilly.m01caching;
 
 // tag::CACHE_EFFECT[]
 public class Caching {

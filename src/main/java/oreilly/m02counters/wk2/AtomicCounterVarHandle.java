@@ -1,6 +1,6 @@
-package oreilly.counters.wk2;
+package oreilly.m02counters.wk2;
 
-import oreilly.counters.Counter;
+import oreilly.m02counters.Counter;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.VarHandle;
 

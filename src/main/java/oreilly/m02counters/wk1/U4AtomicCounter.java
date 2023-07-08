@@ -1,10 +1,10 @@
-package oreilly.counters.wk1;
+package oreilly.m02counters.wk1;
 
-import oreilly.counters.Counter;
+import oreilly.m02counters.Counter;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class AtomicCounter implements Counter  {
+public class U4AtomicCounter implements Counter  {
     private final AtomicInteger internal = new AtomicInteger();
 
     @Override
