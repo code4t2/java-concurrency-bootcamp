@@ -1,9 +1,9 @@
-package oreilly.execution;
+package oreilly.m03execution;
 
-public class SchedulerOverhead {
+public class U1SchedulerOverhead {
 
     public static void main(String[] args) throws InterruptedException {
-        SchedulerOverhead so = new SchedulerOverhead();
+        U1SchedulerOverhead so = new U1SchedulerOverhead();
         so.run();
     }
 
