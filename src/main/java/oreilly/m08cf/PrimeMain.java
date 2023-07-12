@@ -1,9 +1,8 @@
-package oreilly.cf;
+package oreilly.m08cf;
 
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 
-import static oreilly.cf.AsynchPrimeFinder.getNthPrime;
+import static oreilly.m08cf.AsynchPrimeFinder.getNthPrime;
 
 public class PrimeMain {
 

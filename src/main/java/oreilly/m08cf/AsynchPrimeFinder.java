@@ -1,4 +1,4 @@
-package oreilly.cf;
+package oreilly.m08cf;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
