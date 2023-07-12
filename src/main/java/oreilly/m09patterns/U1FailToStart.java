@@ -1,6 +1,6 @@
 package oreilly.m09patterns;
 
-public class FailToStart {
+public class U1FailToStart {
     public static void main(String[] args) throws InterruptedException {
         Runnable r = () -> {
             while(true){
@@ -11,6 +11,6 @@ public class FailToStart {
         var t = new Thread(r);
         t.setDaemon(true);
         t.start();
-//        Thread.sleep(1);
+        Thread.sleep(10);
     }
 }
