@@ -2,7 +2,7 @@ package oreilly.m09patterns.refactor;
 
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class NTRMain {
+public class U3NeedToRefactorMain {
     public static void main(String[] args) {
         var bq = new LinkedBlockingQueue<Item>();
         for (var i = 0; i < 1000; i = i + 1) {

@@ -2,7 +2,7 @@ package oreilly.m09patterns.refactor;
 
 import java.util.concurrent.Executors;
 
-public class RefactoredMain {
+public class U4RefactoredMain {
 
     public static void main(String[] args) {
         var executor = Executors.newSingleThreadExecutor();
