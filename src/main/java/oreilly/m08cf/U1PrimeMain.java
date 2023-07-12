@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutionException;
 
 import static oreilly.m08cf.AsynchPrimeFinder.getNthPrime;
 
-public class PrimeMain {
+public class U1PrimeMain {
 
     public static void main(String[] args) {
         var numF = getNthPrime(10_000);
@@ -16,9 +16,7 @@ public class PrimeMain {
             }
             theNum = numF.get();
             System.out.println("Fetched: " + theNum);
-        } catch (ExecutionException ee ) {
-            // ..
-        } catch (InterruptedException ie ) {
+        } catch (ExecutionException | InterruptedException ee ) {
             // ..
         }
     }
