@@ -6,7 +6,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.stream.IntStream;
 
-public class MergeMain {
+public class U1MergeMain {
 
     public static void main(String[] args) {
         var numbers = shuffleFY(IntStream.range(1, 8192).toArray());

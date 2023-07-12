@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class Shakespeare {
+public class U2Shakespeare {
 
     public static void main(String[] args) {
         var lines = getLines();
@@ -22,7 +22,7 @@ public class Shakespeare {
 
     private static List<String> getLines() {
         try {
-            Path p = Path.of(Shakespeare.class.getResource("/complete_works_of_shakespeare.txt").toURI());
+            Path p = Path.of(U2Shakespeare.class.getResource("/complete_works_of_shakespeare.txt").toURI());
             return Files.readAllLines(p);
         } catch (URISyntaxException | IOException e) {
             throw new RuntimeException(e);
