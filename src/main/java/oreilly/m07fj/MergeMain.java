@@ -1,4 +1,4 @@
-package oreilly.fj;
+package oreilly.m07fj;
 
 import java.security.SecureRandom;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package oreilly.fj;
+package oreilly.m07fj;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

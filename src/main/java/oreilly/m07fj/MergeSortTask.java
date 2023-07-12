@@ -1,4 +1,4 @@
-package oreilly.fj;
+package oreilly.m07fj;
 
 import java.util.Arrays;
 import java.util.concurrent.RecursiveAction;
