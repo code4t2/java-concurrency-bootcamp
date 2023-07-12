@@ -1,6 +1,6 @@
 package oreilly.m09patterns;
 
-public class FailToFinishMain {
+public class U2FailToFinishMain {
 
     public static void main(String[] args) throws InterruptedException {
         Thread t;

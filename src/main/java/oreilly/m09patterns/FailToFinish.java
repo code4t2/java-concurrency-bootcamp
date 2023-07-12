@@ -3,7 +3,7 @@ package oreilly.m09patterns;
 import java.io.Closeable;
 
 public class FailToFinish implements Closeable, Runnable {
-    private boolean shutdown = false;
+    private volatile boolean shutdown = false;
 
     @Override
     public void close() {
