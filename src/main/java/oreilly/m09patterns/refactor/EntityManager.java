@@ -1,4 +1,4 @@
-package oreilly.patterns.refactor;
+package oreilly.m09patterns.refactor;
 
 public class EntityManager {
 

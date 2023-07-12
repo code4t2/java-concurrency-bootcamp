@@ -1,4 +1,4 @@
-package oreilly.patterns;
+package oreilly.m09patterns;
 
 public class FailToStart {
     public static void main(String[] args) throws InterruptedException {

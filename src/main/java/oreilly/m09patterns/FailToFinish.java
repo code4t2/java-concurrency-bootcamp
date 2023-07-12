@@ -1,7 +1,6 @@
-package oreilly.patterns;
+package oreilly.m09patterns;
 
 import java.io.Closeable;
-import java.io.IOException;
 
 public class FailToFinish implements Closeable, Runnable {
     private boolean shutdown = false;

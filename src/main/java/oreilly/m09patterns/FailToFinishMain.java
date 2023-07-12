@@ -1,6 +1,4 @@
-package oreilly.patterns;
-
-import oreilly.patterns.FailToFinish;
+package oreilly.m09patterns;
 
 public class FailToFinishMain {
 

@@ -1,4 +1,4 @@
-package oreilly.patterns.refactor;
+package oreilly.m09patterns.refactor;
 
 import java.util.concurrent.Executors;
 
