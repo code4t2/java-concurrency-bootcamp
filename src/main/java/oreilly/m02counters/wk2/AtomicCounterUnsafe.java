@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 
 public final class AtomicCounterUnsafe implements Counter {
 
-    private static final Unsafe unsafe; // = Unsafe.getUnsafe();
+    private static final Unsafe unsafe = Unsafe.getUnsafe();
     private static final long valueOffset;
 
     private volatile int value = 0;
@@ -14,9 +14,9 @@ public final class AtomicCounterUnsafe implements Counter {
     // setup to use Unsafe.compareAndSwapInt for updates
     static {
         try {
-            Field f = Unsafe.class.getDeclaredField("theUnsafe");
-            f.setAccessible(true);
-            unsafe = (Unsafe) f.get(null);
+//            Field f = Unsafe.class.getDeclaredField("theUnsafe");
+//            f.setAccessible(true);
+//            unsafe = (Unsafe) f.get(null);
             valueOffset = unsafe.objectFieldOffset(AtomicCounterUnsafe.class.getDeclaredField("value"));
             System.out.println("Offset: "+ valueOffset);
         } catch (Exception ex) { throw new Error(ex); }
