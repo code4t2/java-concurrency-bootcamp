@@ -2,6 +2,7 @@ package oreilly.m02counters;
 
 import oreilly.m02counters.wk1.*;
 import oreilly.m02counters.wk2.AtomicCounterUnsafe;
+import oreilly.m02counters.wk2.AtomicCounterVarHandle;
 
 /**
  * @author ben
@@ -10,7 +11,7 @@ public class CounterMain {
     public static final int REPS = 10_000_000;
 
     public static void main(String[] args) throws InterruptedException {
-        final var c = new AtomicCounterUnsafe();
+        final var c = new AtomicCounterVarHandle();
 
         Runnable r1 = () -> {
             for (int i = 0; i < REPS; i = i + 1) {
