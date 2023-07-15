@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-public class ExampleStructuredCon {
+public class U2ExampleStructuredCon {
 
     // A triple consisting of a symbol, its social media sentiment score (-1.0 to +1.0)
     // and the price change (as a percentage) in last 24 hours

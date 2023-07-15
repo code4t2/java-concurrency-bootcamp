@@ -9,7 +9,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class ExampleVTExecutor {
+public class U1ExampleVTExecutor {
 
     public static void main(String[] args) {
         handle(Arrays.stream(args).map(s -> {

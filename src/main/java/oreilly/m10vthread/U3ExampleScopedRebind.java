@@ -4,7 +4,7 @@ import jdk.incubator.concurrent.ScopedValue;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ExampleScopedRebind implements Runnable {
+public class U3ExampleScopedRebind implements Runnable {
     private enum SecurityLevel { USER, ADMIN }
 
     private static final ScopedValue<SecurityLevel> securitySV = ScopedValue.newInstance();
@@ -43,7 +43,7 @@ public class ExampleScopedRebind implements Runnable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        var example = new ExampleScopedRebind();
+        var example = new U3ExampleScopedRebind();
         Thread t1 = new Thread(example);
         Thread t2 = new Thread(example);
         t1.start();

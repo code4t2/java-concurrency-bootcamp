@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ExampleScoped {
+public class U4WebExampleScoped {
 
     public static final ScopedValue<Socket> socketSV = ScopedValue.newInstance();
 
@@ -14,7 +14,7 @@ public class ExampleScoped {
         while (true) {
             var socket = serverSocket.accept();
             ScopedValue.where(socketSV, socket)
-                .run(() -> handle());
+                    .run(() -> handle());
         }
     }
 
