@@ -1,4 +1,4 @@
-package oreilly.vthread;
+package oreilly.m10vthread;
 
 import jdk.incubator.concurrent.ScopedValue;
 

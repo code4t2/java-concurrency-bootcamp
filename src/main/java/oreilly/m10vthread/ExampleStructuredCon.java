@@ -1,13 +1,11 @@
-package oreilly.vthread;
+package oreilly.m10vthread;
 
 import jdk.incubator.concurrent.StructuredTaskScope;
 
 
-import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
-import java.util.function.Supplier;
 
 public class ExampleStructuredCon {
 

@@ -1,4 +1,4 @@
-package oreilly.vthread;
+package oreilly.m10vthread;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

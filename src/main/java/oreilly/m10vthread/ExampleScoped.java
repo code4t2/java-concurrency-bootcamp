@@ -1,7 +1,6 @@
-package oreilly.vthread;
+package oreilly.m10vthread;
 
 import jdk.incubator.concurrent.ScopedValue;
-import jdk.incubator.concurrent.StructuredTaskScope;
 
 import java.io.IOException;
 import java.net.ServerSocket;
